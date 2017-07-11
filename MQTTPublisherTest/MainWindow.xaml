@@ -9,7 +9,7 @@
     <StackPanel Margin="10,10,10,10">
         <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
             <Label HorizontalAlignment="Left" Height="23" Content="host" VerticalAlignment="Top" Width="50" Margin="0,0,5,0"/>
-            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding HostName}" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
+            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding HostName}" IsEnabled="False" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
             <Label HorizontalAlignment="Left" Height="23" Content="topic" VerticalAlignment="Top" Width="50" Margin="0,0,5,0"/>

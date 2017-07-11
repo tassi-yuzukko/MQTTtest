@@ -10,7 +10,7 @@
         <TextBlock HorizontalAlignment="Left" Height="242" TextWrapping="Wrap" Text="{Binding SubscribeLog, Mode=TwoWay}" VerticalAlignment="Top" Width="497" OpacityMask="#FFAA2626" Background="#FFC2F2F7"/>
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
             <Label HorizontalAlignment="Right" Height="23" Content="host" VerticalAlignment="Center" Width="40" Margin="0,0,5,0"/>
-            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding HostName}" VerticalAlignment="Center" Width="120" Margin="0,0,5,0"/>
+            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding HostName}" IsEnabled="False" VerticalAlignment="Center" Width="120" Margin="0,0,5,0"/>
             <Label HorizontalAlignment="Right" Height="23" Content="topic" VerticalAlignment="Center" Width="40" Margin="0,0,5,0"/>
             <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Topic}" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
             <ToggleButton Width="73" Margin="0,0,5,0" HorizontalAlignment="Left" Content="Subscribe" VerticalContentAlignment="Top" IsChecked="{Binding IsSubscribe}"/>

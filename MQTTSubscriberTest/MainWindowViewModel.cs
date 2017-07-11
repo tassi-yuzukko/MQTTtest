@@ -22,6 +22,7 @@ namespace MQTTSubscriberTest
 				RaisePropertyChanged(nameof(SubscribeLog));
 			}
 		}
+		public string HostName { get; set; }
 		public string Topic { get; set; }
 
 		private bool _isSubscribe;
@@ -35,6 +36,16 @@ namespace MQTTSubscriberTest
 					if (Topic == null) return;
 					if (Topic.Length == 0) return;
 
+					_m2mqtt = new MqttClientWrapper(HostName);
+
+					// ブローカー接続
+					if (!_m2mqtt.ConnectToBroker() || !_m2mqtt.IsConnected())
+					{
+						MessageBox.Show("Connection Failed.");
+					}
+
+					_m2mqtt.AddSubscribeAction(SubscribeAction);
+
 					// Subscribe開始
 					_m2mqtt.Subscribe(new string[] { Topic });
 				}
@@ -42,6 +53,8 @@ namespace MQTTSubscriberTest
 				{
 					// Subscribe終了
 					_m2mqtt.Unsubscribe(new string[] { Topic });
+
+					_m2mqtt.Disconnect();
 				}
 				_isSubscribe = value;
 			}
@@ -51,20 +64,10 @@ namespace MQTTSubscriberTest
 
 		public MainWindowViewModel()
 		{
-			_m2mqtt = new MqttClientWrapper("kei-PC");
-
-			// ブローカー接続
-			if (!_m2mqtt.ConnectToBroker("hoge", "foo") || !_m2mqtt.IsConnected())
-			{
-				MessageBox.Show("Connection Failed.");
-			}
-
-			_m2mqtt.AddSubscribeAction(SubscribeAction);
 		}
 
 		~MainWindowViewModel()
 		{
-			_m2mqtt.Disconnect();
 		}
 
 		private void SubscribeAction(string topic, string msg)

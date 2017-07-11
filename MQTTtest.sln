@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MQTTtest2", "M2MQTTtest2\M2MQTTtest2.csproj", "{4F85881D-B322-4E01-8A30-93427E25A892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTTSubscriberTest", "MQTTSubscriberTest\MQTTSubscriberTest.csproj", "{C1A979FB-F3A7-4CEE-BA08-7C785000A787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTTPublisherTest", "MQTTPublisherTest\MQTTPublisherTest.csproj", "{64787499-10E0-4DAD-B5E6-7355B5751917}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F85881D-B322-4E01-8A30-93427E25A892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F85881D-B322-4E01-8A30-93427E25A892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F85881D-B322-4E01-8A30-93427E25A892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F85881D-B322-4E01-8A30-93427E25A892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A979FB-F3A7-4CEE-BA08-7C785000A787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A979FB-F3A7-4CEE-BA08-7C785000A787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A979FB-F3A7-4CEE-BA08-7C785000A787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A979FB-F3A7-4CEE-BA08-7C785000A787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64787499-10E0-4DAD-B5E6-7355B5751917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64787499-10E0-4DAD-B5E6-7355B5751917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64787499-10E0-4DAD-B5E6-7355B5751917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64787499-10E0-4DAD-B5E6-7355B5751917}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

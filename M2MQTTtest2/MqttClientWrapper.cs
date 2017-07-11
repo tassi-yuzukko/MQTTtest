@@ -17,7 +17,8 @@ namespace M2MQTTtest2
 
 		public MqttClientWrapper(string brokerHost)
 		{
-			_client = new MqttClient(brokerHost, MqttSettings.MQTT_BROKER_DEFAULT_SSL_PORT, true, MqttSslProtocols.TLSv1_2, null, null);
+			//_client = new MqttClient(brokerHost, MqttSettings.MQTT_BROKER_DEFAULT_SSL_PORT, true, MqttSslProtocols.TLSv1_2, null, null);
+			_client = new MqttClient(brokerHost);
 
 			// ログ用
 			receiveLogSetting();

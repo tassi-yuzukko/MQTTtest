@@ -12,14 +12,16 @@ namespace MQTTPublisherTest
 {
 	class MainWindowViewModel : ViewModel
 	{
+		public string HostName { get; set; } = "192.168.10.11";
 		public string Topic { get; set; }
+		public string Contents { get; set; }
 
 		private ViewModelCommand _publish;
 		public ViewModelCommand Publish => (_publish = _publish ?? new ViewModelCommand(ExecutePublish));
 
 		private void ExecutePublish()
 		{
-			var _m2mqtt = new MqttClientWrapper("192.168.0.6");
+			var _m2mqtt = new MqttClientWrapper(HostName);
 
 			// ブローカー接続
 			if (!_m2mqtt.ConnectToBroker() || !_m2mqtt.IsConnected())
@@ -27,7 +29,7 @@ namespace MQTTPublisherTest
 				MessageBox.Show("Connection Failed.");
 			}
 
-			_m2mqtt.Publish(Topic, "testMsg");
+			_m2mqtt.Publish(Topic, Contents);
 
 			_m2mqtt.Disconnect();
 		}

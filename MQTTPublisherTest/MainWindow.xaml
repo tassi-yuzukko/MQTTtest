@@ -5,11 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MQTTPublisherTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="104" Width="318">
+        Title="MainWindow" Height="170.356" Width="295.987">
     <StackPanel Margin="10,10,10,10">
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Topic}" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
-            <Button Width="73" Margin="0,0,5,0" HorizontalAlignment="Left" Content="Publish" VerticalContentAlignment="Top" Command="{Binding Publish}"/>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
+            <Label HorizontalAlignment="Left" Height="23" Content="host" VerticalAlignment="Top" Width="50" Margin="0,0,5,0"/>
+            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding HostName}" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
         </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
+            <Label HorizontalAlignment="Left" Height="23" Content="topic" VerticalAlignment="Top" Width="50" Margin="0,0,5,0"/>
+            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Topic}" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
+            <Label HorizontalAlignment="Left" Height="23" Content="contents" VerticalAlignment="Top" Width="50" Margin="0,0,5,0"/>
+            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Contents}" VerticalAlignment="Center" Width="193" Margin="0,0,5,0"/>
+        </StackPanel>
+        <Button Width="73" Margin="0,5,5,0" HorizontalAlignment="Right" Content="Publish" VerticalContentAlignment="Top" Command="{Binding Publish}"/>
     </StackPanel>
 </Window>
